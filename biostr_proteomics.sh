@@ -30,7 +30,7 @@ chmod u+x psm-convert.sh
 ./psm-convert.sh
 
 # merge the three tsv files into 1 to do the manual estimation of the FDR
-cat output/comet/comet.guojiao2_2.target.tsv <(tail -n +2 output/comet/comet.guojiao2_3.target.tsv) <(tail -n +2 output/comet/comet.guojiao2_3.target.tsv) > output/comet/comet.guojiao2_123.target.tsv
+cat output/comet/comet.guojiao2_2.target.tsv <(tail -n +2 output/comet/comet.guojiao2_3.target.tsv) <(tail -n +2 output/comet/comet.guojiao2_3.target.tsv) > output/comet/comet.guojiao2_234.target.tsv
 # The mannual FDR calculation is in a folder inside ./output/
 
 # calculate the FDR/q value using assign-confidence and percolator. 
