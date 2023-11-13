@@ -13,7 +13,7 @@ wget -i data/PXD003557/ind_proteomes -P data/PXD003557
 
 # download the human reference proteome from Uniprot
 mkdir -p resources/proteome
-https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/reference_proteomes/Eukaryota/UP000005640/UP000005640_9606.fasta.gz
+wget -i https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/reference_proteomes/Eukaryota/UP000005640/UP000005640_9606.fasta.gz
 gunzip resources/proteome/human.fasta.gz
 
 # create a target-decoy database
