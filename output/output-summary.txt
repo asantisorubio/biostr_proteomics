@@ -9,19 +9,21 @@ Number of peptide-spectrum matches (PSMs) with FDR or q value < 0.01:
 	
 Contrary to my initial expectations, Percolator appears to be the least restrictive algorithm. 
 It is important to highlight this because as the most complex approach, it is able to separate 
-target from decoy PSMs based on machine-learning methods. 
-
-On the other hand, the number of significant PSMs using the assign-confidence algorithm and 
-calculating the FDR manually is very similar. This is reasonable given that both approaches rely 
-on target/decoy competition (TDC) for assessing the confidence.
+target from decoy PSMs based on machine-learning methods. On the other hand, the number of 
+significant PSMs using the assign-confidence algorithm and calculating the FDR manually is very 
+similar. This is reasonable given that both approaches rely on target/decoy competition (TDC) 
+for assessing the confidence.
 
 A plausible explanation for these results could be that it is not strictly necessary to obtain 
 always a lower number of significant PSMs using a more sophisticated algorithm. In fact, it also 
 depends on the quality and the amount of data included in the analysis. In this case, I have 
-used the data from only 3 files of the study, whose main objective was identifying 
-potential biomarkers of bladder cancer through LC-MS/MS of urine samples. Probably if I had 
-included more files, the results would be closer to what is expected.
+used the data from only 3 files of the study and probably if including all the files would lead 
+to results closer to what was initially expected.
 
 Finally, it is noteworthy that despite the varying outcomes, the results seem to be consistent 
 as they are in the range of 100-400 PSMs with FDR < 0.01 from a list of 378641 total hits 
-(190083 targets). 
+(190083 targets) regardless the approach used. This is actually a very small proportion of the 
+total hits but in my opinion it is reasonable given the nature of the study. The objective of 
+this study was identifying potential biomarkers of bladder cancer through LC-MS/MS of urine 
+samples, and I expected to have less significant PSMs compared with an analysis of the primary 
+tumor's proteome.
