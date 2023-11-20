@@ -1,0 +1,15 @@
+name: prot
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - git
+  - wget
+  - proteowizard
+  - ca-certificates
+  - openssl
+  - decoypyrat
+  - crux-toolkit
+  - mamba
+prefix: /home/adrisantiso/mambaforge/envs/prot
