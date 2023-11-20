@@ -1,22 +1,27 @@
-In this project, I have performed an initial analysis of mass spectrometry data obtained from a 
-human study available in PRIDE. I have calculated the confidence of the peptide matches by 3 
-different approaches obtaining different results:
+In this project, I conducted an initial analysis of mass spectrometry data derived from a 
+human study available in the PRIDE database. I assessed the confidence of peptide matches using 
+3 different approaches, obtaining different results:
 
-No. of peptide-spectrum matches (PSMs) with FDR/q value < 0.01:
+Number of peptide-spectrum matches (PSMs) with FDR or q value < 0.01:
 	- Manual estimation of FDR -> 151
 	- Assign-confidence -> 138
 	- Percolator -> 328
 	
-According to these results, Percolator seems to be the least restrictive algorithm, contrary to 
-what I initially expected as it is the most complex approach, being able to separate target from 
-decoy PSMs based on machine-learning methods.
+Contrary to my initial expectations, Percolator appears to be the least restrictive algorithm. 
+It is important to highlight this because as the most complex approach, it is able to separate 
+target from decoy PSMs based on machine-learning methods. 
 
 On the other hand, the number of significant PSMs using the assign-confidence algorithm and 
-calculating the FDR manually is very similar. This makes sense, because both approaches rely on 
-target/decoy competition (TDC) for assessing the confidence.
+calculating the FDR manually is very similar. This is reasonable given that both approaches rely 
+on target/decoy competition (TDC) for assessing the confidence.
 
-A possible explanation for these could be that it is not strictly necessary to obtain always 
-less significant PSMs using a more sophisticated algorithm, it depends on the quality and the 
-amount of data included in the analysis. In this case, I have used the data from only 3 
-individuals of the study which consisted in identifying putative biomarkers of bladder cancer by 
-LC-MS/MS of urine samples. Probably if I had included more individuals the results would be closer to what is expected.
+A plausible explanation for these results could be that it is not strictly necessary to obtain 
+always a lower number of significant PSMs using a more sophisticated algorithm. In fact, it also 
+depends on the quality and the amount of data included in the analysis. In this case, I have 
+used the data from only 3 files of the study, whose main objective was identifying 
+potential biomarkers of bladder cancer through LC-MS/MS of urine samples. Probably if I had 
+included more files, the results would be closer to what is expected.
+
+Finally, it is noteworthy that despite the varying outcomes, the results seem to be consistent 
+as they are in the range of 100-400 PSMs with FDR < 0.01 from a list of 378641 total hits 
+(190083 targets). 
