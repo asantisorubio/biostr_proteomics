@@ -1,4 +1,4 @@
-
+#!/bin/bash
 
 # create a directory with the files/subdirectories included in this github repository
 git clone https://github.com/asantisorubio/biostr_proteomics
