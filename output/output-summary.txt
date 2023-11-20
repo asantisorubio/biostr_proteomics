@@ -1,0 +1,22 @@
+In this project, I have performed an initial analysis of mass spectrometry data obtained from a 
+human study available in PRIDE. I have calculated the confidence of the peptide matches by 3 
+different approaches obtaining different results:
+
+No. of peptide-spectrum matches (PSMs) with FDR/q value < 0.01:
+	- Manual estimation of FDR -> 151
+	- Assign-confidence -> 138
+	- Percolator -> 328
+	
+According to these results, Percolator seems to be the least restrictive algorithm, contrary to 
+what I initially expected as it is the most complex approach, being able to separate target from 
+decoy PSMs based on machine-learning methods.
+
+On the other hand, the number of significant PSMs using the assign-confidence algorithm and 
+calculating the FDR manually is very similar. This makes sense, because both approaches rely on 
+target/decoy competition (TDC) for assessing the confidence.
+
+A possible explanation for these could be that it is not strictly necessary to obtain always 
+less significant PSMs using a more sophisticated algorithm, it depends on the quality and the 
+amount of data included in the analysis. In this case, I have used the data from only 3 
+individuals of the study which consisted in identifying putative biomarkers of bladder cancer by 
+LC-MS/MS of urine samples. Probably if I had included more individuals the results would be closer to what is expected.
